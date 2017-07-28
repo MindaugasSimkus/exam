@@ -1,5 +1,4 @@
 <?php 
-
 class Person {
 	public $name;
 	public $surname;
@@ -11,12 +10,10 @@ class Person {
 		$this->age = $amzius;
 
 	}
-
 }
 
 $Alytiskis = new Person('Valdas', 'Skikunas', 48);
 
 print_r($Alytiskis);
-
 ?>
 

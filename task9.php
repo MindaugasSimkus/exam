@@ -13,17 +13,12 @@ class Person {
 
 	public function asmensDuomenys() {
 		echo $this->name . " " . $this->surname . " (" . $this->age . ") <br/>";
-
 	}
-
-	
 }
 
 class Staff extends Person {
-
 	public function asmensDuomenys() {
 		echo $this->surname . " " . $this->name . ", Darbuotojas <br/>";
-
 	}
 }
 

@@ -1,6 +1,5 @@
 <pre>
 <?php 
-
 class numberList {
 	public $numbers = [];
 
