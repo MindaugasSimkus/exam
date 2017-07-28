@@ -1,31 +1,16 @@
 <pre>
 <?php 
+session_start();
+$_SESSION['Imone'] = $_POST;
 
-class numberList {
-	public $numbers = [];
+//sesijos tikrinimas:
 
-	public function add($number) {
-		array_push($this->numbers, $number);
-	}
-	public function average() {
-		$average = array_sum($this->numbers)/count($this->numbers);
-		return $average;
-	}
-}
+// print_r($_SESSION['Imone']);
+// die();
 
-$list = new numberList();
 
-print_r($list);
-
-$list->add(12);
-
-print_r($list);
-
-$list->add(28);
-
-print_r($list);
-
-echo $list->average();
+header('Location: task11.html');
+exit;
 
 ?>
 

@@ -1,31 +1,47 @@
-<pre>
 <?php 
 
-class numberList {
-	public $numbers = [];
-
-	public function add($number) {
-		array_push($this->numbers, $number);
-	}
-	public function average() {
-		$average = array_sum($this->numbers)/count($this->numbers);
-		return $average;
-	}
-}
-
-$list = new numberList();
-
-print_r($list);
-
-$list->add(12);
-
-print_r($list);
-
-$list->add(28);
-
-print_r($list);
-
-echo $list->average();
+session_start();
+include "task11.php";
 
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table of divs</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<form action="task11.php" method="POST">
+				<div class="form-group col-12">
+					<label for="product-name" class="col-form-label">Imones pavadinimas</label>
+					<input class="form-control" type="text" id="product-name" name="name">
+				</div>
+				<div class="form-group col-12">
+					<label for="brand" class="col-form-label">Imones kodas</label>
+					<input class="form-control" type="text" id="kodas"  name="kodas">
+				</div>
+				<div class="form-group col-12">
+					<label for="group" class="col-form-label">Kliento tipas</label>
+					<select class="form-control" id="tipas" name="tipas">
+						<option value="Bronzinis">Bronzinis</option>
+						<option value="Sidabrinis">Sidabrinis</option>
+						<option value="Auksinis">Auksinis</option>
+					</select>
+				</div>
+				<div class="form-group col-12">
+					<button class="btn btn-default" action="submit">Pridekite imone</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
+
 
