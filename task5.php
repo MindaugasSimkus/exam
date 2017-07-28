@@ -1,12 +1,7 @@
 <?php 
 
-	function aritmetinis_vidurkis() {
-		$var1 = 64;
-		$var2 = 16;
-		$vidurkis = (sqrt($var1) + sqrt($var2))/2;
-		echo $vidurkis;
-	}
+	$automobilis = ["Marke"=>"Opel", "Modelis"=>"Insignia", "Pagaminimo_metai"=>"2010", "Spalva"=>"Pilka", "Galia"=>"96 kW"];
 
-	aritmetinis_vidurkis();
+	print_r($automobilis);
 ?>
 
